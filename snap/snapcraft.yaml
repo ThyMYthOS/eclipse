@@ -15,7 +15,7 @@ architectures:
 
 apps:
   eclipse:
-    command: eclipse
+    command: eclipse -user ${SNAP_USER_COMMON}
     desktop: eclipse.desktop
 
 parts:
@@ -41,3 +41,5 @@ parts:
       - on amd64: http://ftp.halifax.rwth-aachen.de/eclipse/technology/epp/downloads/release/$SNAPCRAFT_PROJECT_VERSION/R/eclipse-java-$SNAPCRAFT_PROJECT_VERSION-R-linux-gtk-x86_64.tar.gz
     build-attributes:
       - no-patchelf
+    override-build: |
+      patch -p1 < $SNAPCRAFT_STAGE/eclipse.ini.patch

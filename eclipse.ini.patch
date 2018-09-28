@@ -1,0 +1,12 @@
+--- A/eclipse.ini	2018-12-14 13:33:51.000000000 +0100
++++ B/eclipse.ini	2019-02-24 13:07:53.669660721 +0100
+@@ -13,7 +13,8 @@
+ --launcher.appendVmargs
+ -vmargs
+ -Dosgi.requiredJavaVersion=1.8
+--Dosgi.instance.area.default=@user.home/eclipse-workspace
++-Dosgi.configuration.area=@user.home/.eclipse/org.eclipse/configuration
++-Dosgi.instance.area.default=@user.home/../current/workspace
+ -XX:+UseG1GC
+ -XX:+UseStringDeduplication
+ --add-modules=ALL-SYSTEM
