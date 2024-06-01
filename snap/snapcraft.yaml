@@ -22,6 +22,7 @@ apps:
     command: bin/eclipse-wrapper
     environment:
       __NV_PRIME_RENDER_OFFLOAD: 1
+      WEBKIT_DISABLE_COMPOSITING_MODE: 1
 
 parts:
   eclipse:
